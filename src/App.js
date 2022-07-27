@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import Menu from './components/Menu';
+import Navbar from './components/Navbar';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const Container = styled.div`display: flex;`;
+const Main = styled.div`flex: 7;`;
+const Wrapper = styled.div``;
+
+function App () {
+	return (
+		<Container>
+			<Menu />
+			<Main>
+				<Navbar />
+				<Wrapper>Video cards</Wrapper>
+			</Main>
+		</Container>
+	);
 }
 
 export default App;
